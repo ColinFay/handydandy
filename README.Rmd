@@ -70,11 +70,9 @@ css <- Dandy$new()
 
 css$add_style("body", list("font-family" = "Helvetica",
                          "color" = "#24292e"))
-css$add_style("h2", list("font-size" = "3 em",
-                       "color" = "#911414",
+css$add_style("h2", list("color" = "#911414",
                        "text-align" = "center"))
-css$add_style("h3", list("font-size" = "1.5 em",
-                       "color" = "#2E2E8F",
+css$add_style("h3", list("color" = "#2E2E8F",
                        "text-align" = "center"))
 
 
