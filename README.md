@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
 # handydandy
 
 The goal of {handydandy} is to provide an easy to use API for bringing
@@ -16,7 +18,7 @@ remotes::install_github("ColinFay/handydandy")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+### Add and remove css elements
 
 ``` r
 library(handydandy)
@@ -45,6 +47,8 @@ css$remove_style("h2", "color")
 css
 #> <style type="text/css"> h2 { font-size: 3 em; text-align: center } </style>
 ```
+
+### In a shiny app
 
 The idea of course is to use it in shiny app:
 
