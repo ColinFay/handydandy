@@ -1,0 +1,16 @@
+Package: handydandy
+Title: Easy CSS Styling for Shiny
+Version: 0.0.0.9000
+Authors@R: person('Colin', 'Fay', email = 'contact@colinfay.me', role = c('cre', 'aut'))
+Description: Easy CSS Styling for Shiny.
+License: MIT + file LICENSE
+LazyData: true
+URL: https://github.com/ColinFay/handydandy
+BugReports: https://github.com/ColinFay/handydandy/issues
+Encoding: UTF-8
+Suggests: 
+    testthat
+Imports: 
+    R6,
+    htmltools
+RoxygenNote: 6.0.1
