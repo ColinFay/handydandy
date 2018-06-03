@@ -18,7 +18,7 @@ remotes::install_github("ColinFay/handydandy")
 
 ## Example
 
-### Add and remove css elements
+### Add, update, remove css elements
 
 ``` r
 library(handydandy)
