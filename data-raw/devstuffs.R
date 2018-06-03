@@ -11,3 +11,5 @@ dir.create("readme-fig")
 usethis::use_build_ignore("readme-fig")
 
 usethis::use_test("R6")
+
+usethis::use_lifecycle_badge("experimental")
