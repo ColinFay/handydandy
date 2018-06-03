@@ -6,15 +6,18 @@
 Dandy <- R6::R6Class("Dandy",
                    public = list(
                      styles = list(),
-                     add_style = function(identifier, content){
-                       self$styles[[identifier]] <- content
+                     add_style = function(selector, content){
+                       self$styles[[selector]] <- content
                      },
-                     remove_style = function(identifier, content = NULL){
-                       if (is.null(content)){
-                         self$styles[[identifier]] <- NULL
+                     remove_style = function(selector, property = NULL){
+                       if (is.null(property)){
+                         self$styles[[selector]] <- NULL
                        } else {
-                         self$styles[[identifier]][[content]] <- NULL
+                         self$styles[[selector]][[property]] <- NULL
                        }
+                     },
+                     update_style = function(selector, property, value){
+                         self$styles[[selector]][[property]] <- value
                      },
                      print = function(){
                       cat(HTML(c('<style type="text/css">', private$stylish(self$styles), '</style>')))

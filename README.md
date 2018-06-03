@@ -26,7 +26,10 @@ library(handydandy)
 # Create a new dandy
 css <- Dandy$new()
 
-# It's easy to add a new style
+# It's easy to add a new style, you need to pass 
+# + a selector
+# + a list of property = value
+
 css$add_style("body", list("font-family" = "Helvetica",
                          "color" = "#24292e"))
 css$add_style("h2", list("font-size" = "3 em",
@@ -35,15 +38,18 @@ css$add_style("h2", list("font-size" = "3 em",
 css
 #> <style type="text/css"> body { font-family: Helvetica; color: #24292e } h2 { font-size: 3 em; color: #911414; text-align: center } </style>
 
+# Easy to update
+css$update_style("body","color","#911414")
+css
+#> <style type="text/css"> body { font-family: Helvetica; color: #911414 } h2 { font-size: 3 em; color: #911414; text-align: center } </style>
+
 # Or to remove one 
 css$remove_style("body")
-
 css
 #> <style type="text/css"> h2 { font-size: 3 em; color: #911414; text-align: center } </style>
 
 # You can also simply remove one part of your tag
 css$remove_style("h2", "color")
-
 css
 #> <style type="text/css"> h2 { font-size: 3 em; text-align: center } </style>
 ```
